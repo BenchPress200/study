@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         BubbleSort bubbleSort = new BubbleSort();
         SelectionSort selectionSort = new SelectionSort();
+        InsertionSort insertionSort = new InsertionSort();
 
         // 버블 정렬
         int[] arr = new int[] {3, 4, 5, 1, 10, 6, 9, 2, 8, 7};
@@ -24,6 +25,14 @@ public class Main {
         System.out.println("Selection Sort");
         printArray(arr);
         selectionSort.run(arr);
+        printArray(arr);
+
+
+        // 삽입 정렬
+        arr = new int[] {3, 4, 5, 1, 10, 6, 9, 2, 8, 7};
+        System.out.println("Insertion Sort");
+        printArray(arr);
+        insertionSort.run(arr);
         printArray(arr);
     }
 
