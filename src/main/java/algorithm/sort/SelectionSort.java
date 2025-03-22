@@ -1,7 +1,7 @@
 package algorithm.sort;
 
 public class SelectionSort extends Sort {
-    protected SelectionSort() {
+    public SelectionSort() {
         super("Selection");
     }
 

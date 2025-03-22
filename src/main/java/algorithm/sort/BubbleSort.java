@@ -1,8 +1,7 @@
 package algorithm.sort;
 
 public class BubbleSort extends Sort {
-
-    protected BubbleSort() {
+    public BubbleSort() {
         super("Bubble");
     }
 

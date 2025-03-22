@@ -6,6 +6,7 @@ public class Main {
         Sort selectionSort = new SelectionSort();
         Sort insertionSort = new InsertionSort();
         Sort quickSort = new QuickSort();
+        Sort mergeSort = new MergeSort();
 
         // 버블 정렬
         int[] arr = new int[] {3, 4, 5, 1, 10, 6, 9, 2, 8, 7};
@@ -28,6 +29,11 @@ public class Main {
         // 퀵 정렬
         arr = new int[] {3, 4, 5, 1, 10, 6, 9, 2, 8, 7};
         printTestResult(arr, quickSort);
+
+
+        // 병합 정렬
+        arr = new int[] {3, 4, 5, 1, 10, 6, 9, 2, 8, 7};
+        printTestResult(arr, mergeSort);
     }
 
     private static void printTestResult(int[] arr, Sort sort) {

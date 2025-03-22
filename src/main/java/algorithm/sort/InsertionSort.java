@@ -1,7 +1,7 @@
 package algorithm.sort;
 
 public class InsertionSort extends Sort{
-    protected InsertionSort() {
+    public InsertionSort() {
         super("Insertion");
     }
 

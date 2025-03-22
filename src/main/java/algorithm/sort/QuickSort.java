@@ -1,7 +1,7 @@
 package algorithm.sort;
 
 public class QuickSort extends Sort {
-    protected QuickSort() {
+    public QuickSort() {
         super("Quick");
     }
 
