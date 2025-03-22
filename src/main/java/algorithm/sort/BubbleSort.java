@@ -1,6 +1,12 @@
 package algorithm.sort;
 
-public class BubbleSort {
+public class BubbleSort extends Sort {
+
+    protected BubbleSort() {
+        super("Bubble");
+    }
+
+    @Override
     public void run(int[] arr) {
         int range = arr.length - 1; // 정렬 범위 초기 설정
 
@@ -15,6 +21,7 @@ public class BubbleSort {
         }
     }
 
+    @Override
     public void runOpt(int[] arr) {
         int range = arr.length - 1; // 정렬 범위 초기 설정
 
@@ -34,11 +41,5 @@ public class BubbleSort {
 
             range--; // 정렬범위 축소
         }
-    }
-
-    private void swap(int[] arr, int aIdx, int bIdx) {
-        int temp = arr[aIdx];
-        arr[aIdx] = arr[bIdx];
-        arr[bIdx] = temp;
     }
 }
