@@ -62,7 +62,7 @@ public class Main {
         System.out.println();
     }
 
-    public static void printArray(int[] arr) {
+    private static void printArray(int[] arr) {
         for (int j : arr) {
             System.out.print(j + " ");
         }
