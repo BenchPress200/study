@@ -6,6 +6,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         DFS dfs = new DFS();
+        BFS bfs = new BFS();
 
         // 0 ~ 9번 정점을 가지는 그래프
         List<Integer>[] graph = getGraph();
@@ -13,6 +14,10 @@ public class Main {
         // DFS
         int[] result = dfs.run(graph);
         printTestResult(result, "DFS");
+
+        // BFS
+        result = bfs.run(graph);
+        printTestResult(result, "BFS");
     }
 
     private static List<Integer>[] getGraph() {
