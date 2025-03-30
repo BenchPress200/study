@@ -1,12 +1,16 @@
 package algorithm.search;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
         DFS dfs = new DFS();
         BFS bfs = new BFS();
+        BinarySearch binarySearch = new BinarySearch();
 
         // 0 ~ 9번 정점을 가지는 그래프
         List<Integer>[] graph = getGraph();
@@ -18,6 +22,37 @@ public class Main {
         // BFS
         result = bfs.run(graph);
         printTestResult(result, "BFS");
+
+        // BinarySearch
+        System.out.println("Binary Search");
+        int target = 5;
+        int[] arr = createRandomArray();
+        System.out.println("target: " + target);
+        System.out.print("arr: ");
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+        int targetIndex = binarySearch.run(arr, target);
+        System.out.println("Target Index: " + targetIndex);
+    }
+
+    private static int[] createRandomArray() {
+        List<Integer> candidates = new ArrayList<>();
+        for (int i = 0; i <= 9; i++) {
+            candidates.add(i);
+        }
+
+        Collections.shuffle(candidates); // 리스트를 랜덤하게 섞음
+
+        int[] result = new int[10];
+
+        for (int i = 0; i < 10; i++) {
+            result[i] = candidates.get(i);
+        }
+
+        Arrays.sort(result);
+        return result;
     }
 
     private static List<Integer>[] getGraph() {
