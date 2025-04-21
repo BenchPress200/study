@@ -16,7 +16,7 @@ public class QuickSort extends Sort {
             return;
         }
 
-        int pivot = partition(arr, left, right);
+        int pivot = partition(arr, left, right); // 자리가 정해진 피벗
         quickSort(arr, left, pivot-1); // pivot 기준 왼쪽 퀵 정렬 진행
         quickSort(arr, pivot+1, right); // pivot 기준 오른쪽 퀵 정렬 진행
     }
@@ -24,22 +24,22 @@ public class QuickSort extends Sort {
     private int partition(int[] arr, int left, int right) {
         // 피벗 선정
         int pivot = right;
-        int pivotValue = arr[right--];
+        int pivotValue = arr[right--]; // 피벗값 할당하고 오른쪽 포인터 --
 
         while(left < right) {
-            // 피벗값보다 왼쪽값이 큰 경우 스왑 필요 없으므로 이동
+            // 피벗값이 왼쪽값 보다 큰 경우 스왑 필요 없으므로 이동
             if(pivotValue > arr[left]) {
                 left++;
                 continue;
             }
 
-            // 피벗값보다 오른쪽값이 작은 경우 스왑 필요 없으므로 이동
+            // 피벗값이 오른쪽값 보다 작은 경우 스왑 필요 없으므로 이동
             if(pivotValue < arr[right]) {
                 right--;
                 continue;
             }
 
-            // 왼쪽은 피봇보다 크고 오른쪽은 피봇보다 작을 때 스왑진행
+            // 왼쪽은 피벗보다 크고 오른쪽은 피벗보다 작을 때 스왑진행
             if(pivotValue < arr[left] && pivotValue > arr[right]) {
                 swap(arr, left++, right--);
             }
